@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
-    <title>Album example · Bootstrap</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+    <meta name="author" content="Vaibhav Saraf">
+    <meta name="generator" content="">
+    <title>Vaibhav Saraf</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -46,9 +45,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link" href="#">Twitter</a>
-                    <a class="nav-item nav-link" href="#">Resume</a>
-                    <a class="nav-item nav-link" href="#">Blog</a>
+                    <a class="nav-item nav-link" href="https://github.com/VaibhavSaraf/">Github</a>
+                    <a class="nav-item nav-link" href="https://www.linkedin.com/in/vaibhavsaraf/">LinkedIn</a>
+                    <a class="nav-item nav-link" href="https://twitter.com/vaibhavgsaraf">Twitter</a>
+                    <a class="nav-item nav-link" href="{% static 'VaibhavSaraf_PICT.pdf' %}">Resume</a>
+                    <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
                     
                 </div>
             </div>
@@ -64,6 +65,7 @@
                 <p>
                     <a href="mailto:vaibhavgsaraf@gmail.com" class="btn btn-primary my-2">Email me</a>
                 </p>
+                <img class = "img-fluid" src= "{% static 'vaibhav.jpg' %}" height="200" width="200" />
             </div>
         </section>
 
@@ -81,6 +83,7 @@
                         </div>
                     </div>
                     {% endfor %}
+                    
                 </div>
             </div>
         </div>
